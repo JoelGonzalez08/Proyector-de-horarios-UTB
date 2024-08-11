@@ -100,34 +100,10 @@ Identify requirements that may be delayed until future versions of the system (e
 
 ## 3. Requirements
 
-### 3.1 Requerimientos Funcionales
-  
-#### 3.1.1 Generación de Horarios
-* La aplicación debe ser capaz de generar todas las combinaciones posibles de horarios basados en las asignaturas, profesores, y     salones disponibles para cada carrera.
-* Debe permitir a los estudiantes seleccionar sus materias de acuerdo con su plan de estudios.
-* El sistema debe mostrar las opciones de horarios disponibles basadas en la selección de materias y sus restricciones.
-
-#### 3.1.2 Gestión de Información de la Universidad
-* El sistema debe integrar y actualizar dinámicamente la información de los horarios, salones, y profesores proporcionada por la UTB.
-Debe permitir la consulta y modificación de la información por parte de administradores designados.
-
-#### 3.1.3 Interacción con el Usuario
-* Los estudiantes deben poder ingresar sus preferencias (como horarios preferidos, profesores, etc.) y recibir opciones de horarios personalizados.
-* El sistema debe permitir a los estudiantes guardar y exportar sus horarios en formatos como PDF o imagen.
-Debe ser capaz de notificar a los estudiantes sobre cambios en sus horarios (cambio de salón, cambio de profesor, etc.).
-
-#### 3.1.4 Acceso a la Información
-* El sistema debe proporcionar acceso seguro a los estudiantes mediante autenticación basada en credenciales universitarias.
-* Debe incluir una interfaz intuitiva y accesible para que los estudiantes puedan navegar y seleccionar sus opciones de horario sin complicaciones.
-
 ### 3.2 Requerimientos No Funcionales
 #### 3.2.1 Rendimiento
 * El sistema debe ser capaz de procesar y generar horarios en tiempo real para al menos 5000 estudiantes simultáneamente.
 * La respuesta del sistema ante las consultas de los estudiantes debe ser inferior a 2 segundos.
-
-#### 3.2.2 Seguridad
-* Los datos de los estudiantes y de la universidad deben estar encriptados durante el almacenamiento y transmisión.
-* Debe garantizar la autenticación y autorización adecuadas para diferentes roles de usuario (estudiantes, administradores, etc.).
 
 #### 3.2.3 Escalabilidad
 * El sistema debe ser escalable para soportar un incremento en la cantidad de usuarios y de datos a lo largo del tiempo, especialmente durante períodos de inscripción y cambios de semestre.
@@ -183,7 +159,23 @@ Describe the logical and physical characteristics of each interface between the 
 Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.
 
 ### 3.2 Functional
-> This section specifies the requirements of functional effects that the software-to-be is to have on its environment.
+#### 3.2.1 Generación de Horarios
+* La aplicación debe ser capaz de generar todas las combinaciones posibles de horarios basados en las asignaturas, profesores, y     salones disponibles para cada carrera.
+* Debe permitir a los estudiantes seleccionar sus materias de acuerdo con su plan de estudios.
+* El sistema debe mostrar las opciones de horarios disponibles basadas en la selección de materias y sus restricciones.
+
+#### 3.2.2 Gestión de Información de la Universidad
+* El sistema debe integrar y actualizar dinámicamente la información de los horarios, salones, y profesores proporcionada por la UTB.
+Debe permitir la consulta y modificación de la información por parte de administradores designados.
+
+#### 3.2.3 Interacción con el Usuario
+* Los estudiantes deben poder ingresar sus preferencias (como horarios preferidos, profesores, etc.) y recibir opciones de horarios personalizados.
+* El sistema debe permitir a los estudiantes guardar y exportar sus horarios en formatos como PDF o imagen.
+Debe ser capaz de notificar a los estudiantes sobre cambios en sus horarios (cambio de salón, cambio de profesor, etc.).
+
+#### 3.2.4 Acceso a la Información
+* El sistema debe proporcionar acceso seguro a los estudiantes mediante autenticación basada en credenciales universitarias.
+* Debe incluir una interfaz intuitiva y accesible para que los estudiantes puedan navegar y seleccionar sus opciones de horario sin complicaciones.
 
 ### 3.3 Quality of Service
 > This section states additional, quality-related property requirements that the functional effects of the software should present.
@@ -192,7 +184,8 @@ Describe the connections between this product and other specific software compon
 If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.
 
 #### 3.3.2 Security
-Specify any requirements regarding security or privacy issues surrounding use of the product or protection of the data used or created by the product. Define any user identity authentication requirements. Refer to any external policies or regulations containing security issues that affect the product. Define any security or privacy certifications that must be satisfied.
+* Los datos de los estudiantes y de la universidad deben estar encriptados durante el almacenamiento y transmisión.
+* Debe garantizar la autenticación y autorización adecuadas para diferentes roles de usuario (estudiantes, administradores, etc.).
 
 #### 3.3.3 Reliability
 Specify the factors required to establish the required reliability of the software system at time of delivery.
