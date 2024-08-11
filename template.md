@@ -99,15 +99,63 @@ Apportion the software requirements to software elements. For requirements that 
 Identify requirements that may be delayed until future versions of the system (e.g., blocks and/or increments).
 
 ## 3. Requirements
-> This section specifies the software product's requirements. Specify all of the software requirements to a level of detail sufficient to enable designers to design a software system to satisfy those requirements, and to enable testers to test that the software system satisfies those requirements.
 
-> The specific requirements should:
-* Be uniquely identifiable.
-* State the subject of the requirement (e.g., system, software, etc.) and what shall be done.
-* Optionally state the conditions and constraints, if any.
-* Describe every input (stimulus) into the software system, every output (response) from the software system, and all functions performed by the software system in response to an input or in support of an output.
-* Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
-* Conform to agreed upon syntax, keywords, and terms.
+### 3.1 Requerimientos Funcionales
+  
+#### 3.1.1 Generación de Horarios
+* La aplicación debe ser capaz de generar todas las combinaciones posibles de horarios basados en las asignaturas, profesores, y     salones disponibles para cada carrera.
+* Debe permitir a los estudiantes seleccionar sus materias de acuerdo con su plan de estudios.
+* El sistema debe mostrar las opciones de horarios disponibles basadas en la selección de materias y sus restricciones.
+
+#### 3.1.2 Gestión de Información de la Universidad
+* El sistema debe integrar y actualizar dinámicamente la información de los horarios, salones, y profesores proporcionada por la UTB.
+Debe permitir la consulta y modificación de la información por parte de administradores designados.
+
+#### 3.1.3 Interacción con el Usuario
+* Los estudiantes deben poder ingresar sus preferencias (como horarios preferidos, profesores, etc.) y recibir opciones de horarios personalizados.
+* El sistema debe permitir a los estudiantes guardar y exportar sus horarios en formatos como PDF o imagen.
+Debe ser capaz de notificar a los estudiantes sobre cambios en sus horarios (cambio de salón, cambio de profesor, etc.).
+
+#### 3.1.4 Acceso a la Información
+* El sistema debe proporcionar acceso seguro a los estudiantes mediante autenticación basada en credenciales universitarias.
+* Debe incluir una interfaz intuitiva y accesible para que los estudiantes puedan navegar y seleccionar sus opciones de horario sin complicaciones.
+
+### 3.2 Requerimientos No Funcionales
+#### 3.2.1 Rendimiento
+* El sistema debe ser capaz de procesar y generar horarios en tiempo real para al menos 5000 estudiantes simultáneamente.
+* La respuesta del sistema ante las consultas de los estudiantes debe ser inferior a 2 segundos.
+
+#### 3.2.2 Seguridad
+* Los datos de los estudiantes y de la universidad deben estar encriptados durante el almacenamiento y transmisión.
+* Debe garantizar la autenticación y autorización adecuadas para diferentes roles de usuario (estudiantes, administradores, etc.).
+
+#### 3.2.3 Escalabilidad
+* El sistema debe ser escalable para soportar un incremento en la cantidad de usuarios y de datos a lo largo del tiempo, especialmente durante períodos de inscripción y cambios de semestre.
+
+#### 3.2.4 Disponibilidad
+* El sistema debe estar disponible el 99.9% del tiempo, con una tolerancia mínima a fallos durante períodos críticos como la inscripción de materias.
+
+#### 3.2.5 Usabilidad
+* La interfaz de usuario debe ser diseñada para ser intuitiva, fácil de usar y accesible desde dispositivos móviles y de escritorio.
+* Debe cumplir con estándares de accesibilidad para asegurar que todos los estudiantes, incluyendo aquellos con discapacidades, puedan utilizar el sistema sin inconvenientes.
+
+### 3.3 Requerimientos del Usuario
+
+#### 3.3.1 Acceso Personalizado
+* Los estudiantes deben poder acceder a la plataforma utilizando sus credenciales universitarias (correo institucional y contraseña).
+* Cada estudiante debe tener acceso a su plan de estudios y opciones de horario basadas en su carrera y semestre.
+
+#### 3.3.2 Soporte Multilingüe
+* El sistema debe ofrecer soporte en varios idiomas, incluido el español y el inglés, para facilitar su uso por parte de estudiantes internacionales.
+
+### 3.4 Restricciones
+
+#### 3.4.1 Compatibilidad
+* El sistema debe ser compatible con las plataformas tecnológicas actuales de la UTB, incluyendo el sistema de gestión académica y la base de datos de horarios.
+
+#### 3.4.2 Regulaciones y Políticas
+* El sistema debe cumplir con las políticas de privacidad y protección de datos de la UTB y las regulaciones locales sobre manejo de información personal.
+* Este conjunto de requerimientos proporciona una base sólida para comenzar el desarrollo de una aplicación o servicio que genere horarios estudiantiles de manera eficiente y que cumpla con las expectativas y necesidades tanto de los estudiantes como de la administración universitaria.
 
 ### 3.1 External Interfaces
 > This subsection defines all the inputs into and outputs requirements of the software system. Each interface defined may include the following content:
