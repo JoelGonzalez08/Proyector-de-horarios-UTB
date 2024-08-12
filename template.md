@@ -9,7 +9,7 @@ Prepared by <author>
 Table of Contents
 =================
 * [Revision History](#revision-history)
-* 1 [Introduction](#1-introduction)
+* 1 [Introducción](#1-introducción)
   * 1.1 [Document Purpose](#11-document-purpose)
   * 1.2 [Product Scope](#12-product-scope)
   * 1.3 [Definitions, Acronyms and Abbreviations](#13-definitions-acronyms-and-abbreviations)
@@ -53,7 +53,7 @@ Table of Contents
 |      |         |                     |           |
 |      |         |                     |           |
 
-## 1. Introduction
+## 1. Introducción
 
 
 ### 1.1 Document Purpose
