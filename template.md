@@ -10,19 +10,18 @@ Table of Contents
 =================
 * [Revision History](#revision-history)
 * 1 [Introducción](#1-introducción)
-  * 1.1 [Propósito del documento](#11-propósito-del-documento)
+  * 1.1 [Propósito del documento](#11-proposito-del-documento)
   * 1.2 [Alcance del producto](#12-alcance-del-producto)
-  * 1.3 [Definitions, Acronyms and Abbreviations](#13-definitions-acronyms-and-abbreviations)
-  * 1.4 [References](#14-references)
-  * 1.5 [Document Overview](#15-document-overview)
-* 2 [Product Overview](#2-product-overview)
-  * 2.1 [Product Perspective](#21-product-perspective)
-  * 2.2 [Product Functions](#22-product-functions)
-  * 2.3 [Product Constraints](#23-product-constraints)
-  * 2.4 [User Characteristics](#24-user-characteristics)
-  * 2.5 [Assumptions and Dependencies](#25-assumptions-and-dependencies)
-  * 2.6 [Apportioning of Requirements](#26-apportioning-of-requirements)
-* 3 [Requirements](#3-requirements)
+  * 1.3 [Definiciones, acrónimos y abreviaciones](#13-definiciones-acronimos-y-abreviaciones)
+  * 1.4 [Referencias](#14-referencias)
+  * 1.5 [Descripción general del documento](#15-descripcion-general-del-documento)
+* 2 [Descripción general del producto](#2-descripcion-general-del-producto)
+  * 2.1 [Perspectiva del producto](#21-perspectiva-del-producto)
+  * 2.2 [Funciones del producto](#22-funciones-del-producto)
+  * 2.3 [Características del usuario](#23-caracteristicas-del-usuario)
+  * 2.4 [Supuestos y dependencias](#24-supuestos-y-dependencias)
+  * 2.5 [Distribución de requisitos](#25-distribucion-de-requisitos)
+* 3 [Requerimientos](#3-requerimientos)
   * 3.1 [External Interfaces](#31-external-interfaces)
     * 3.1.1 [User Interfaces](#311-user-interfaces)
     * 3.1.2 [Hardware Interfaces](#312-hardware-interfaces)
@@ -67,44 +66,43 @@ Los beneficios esperados incluyen la reducción del tiempo y esfuerzo que los es
 Si bien este documento se centra en la versión inicial del software, se prevé la posibilidad de futuras expansiones que incluirán nuevas funcionalidades y mejoras en respuesta a las necesidades emergentes de los estudiantes.
 
 
-### 1.3 Definitions, Acronyms and Abbreviations
+### 1.3 Definiciones, acrónimos and abreviaciones
 
 * **SRS**: Especificación de Requisitos de Software (Software Requirements Specification).
 * **GUI**: Interfaz Gráfica de Usuario (Graphical User Interface).
 * **Web Scraping**: Proceso automatizado de extracción de información desde sitios web. En el contexto de este proyecto, el web scraping se utilizará para obtener los horarios de cada clase desde la plataforma Banner de la Universidad Tecnológica de Bolívar (UTB). Este método permitirá al software planeador de horarios extraer datos relevantes, como horarios, aulas y profesores, directamente desde el sistema institucional, garantizando que la información utilizada en la planificación académica esté siempre actualizada y sea precisa.
 
 
-### 1.4 References
+### 1.4 Referencias
 
 
-### 1.5 Document Overview
+### 1.5 Descripción general del documento
 Este documento está organizado de la siguiente manera:
 * La Sección 2 proporciona una visión general del producto, incluyendo su contexto, funciones principales, restricciones y características del usuario.
 * La Sección 3 detalla los requisitos específicos del software, incluyendo interfaces externas, requisitos funcionales y no funcionales, y otros aspectos técnicos.
 
 
-## 2. Product Overview
+## 2. Descripción general del producto
 
 
-### 2.1 Product Perspective
+### 2.1 Perspectiva del producto
 El proyector de horarios UTB es un producto nuevo y autónomo, diseñado para integrarse con los sistemas actuales de la UTB. Este software proporcionará una solución eficiente para la gestión de horarios estudiantiles, sin necesidad de reemplazar sistemas existentes. Su implementación mejorará la experiencia académica de los estudiantes y optimizará la utilización de recursos institucionales.
 
-### 2.2 Product Functions
+### 2.2 Funciones del producto
 - **Generación de Horarios**: Crear todas las combinaciones posibles de horarios basados en materias, profesores, y salones disponibles.
 - **Gestión de Información Universitaria**: Integrar y actualizar dinámicamente la información de la universidad.
 - **Interacción con el Usuario**: Permitir a los estudiantes seleccionar y personalizar sus horarios.
 - **Acceso a la Información**: Proporcionar acceso seguro y autenticado a los estudiantes.
 
-### 2.4 User Characteristics
+### 2.3 Características del usuario
 El sistema está destinado a ser utilizado por estudiantes universitarios, con diferentes niveles de experiencia técnica. Se espera que los usuarios tengan acceso regular a internet y dispositivos compatibles, y que estén familiarizados con la navegación básica en entornos digitales.
 
-### 2.5 Assumptions and Dependencies
+### 2.4 Supuestos y dependencias
 - El sistema depende de la exactitud y actualización oportuna de los datos proporcionados por la UTB.
 - Asume que los usuarios tendrán acceso a credenciales válidas para la autenticación.
 
-### 2.6 Apportioning of Requirements
-
-## 3. Requirements
+### 2.5 Distribución de requisitos
+## 3. Requerimientos
 
 ### 3.1 Requisitos Funcionales
 - **Generación de Horarios**: El sistema debe generar todas las combinaciones posibles de horarios basados en las materias seleccionadas. A su vez, dentro de los horarios, cada materia se deberá mostrar con código de la clase (NRC), profesor y salón asignado.
