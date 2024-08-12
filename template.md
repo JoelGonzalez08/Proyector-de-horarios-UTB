@@ -2,12 +2,12 @@
 ## Proyector de horarios UTB
 
 Version 0.1  
-Prepared by Joel González, Eddy Ruiz, Álvaro Ayala, Jesús Lorett, Maykol Madrid  
+Hecho por Joel González, Eddy Ruiz, Álvaro Ayala, Jesús Lorett, Maykol Madrid  
 <date created>  
 
-Table of Contents
+Tabla de contenido
 =================
-* [Revision History](#revision-history)
+* [Revisión Histórica](#revision-historica)
 * 1 [Introducción](#1-introducción)
   * 1.1 [Propósito del documento](#11-proposito-del-documento)
   * 1.2 [Alcance del producto](#12-alcance-del-producto)
@@ -50,12 +50,12 @@ Table of Contents
 * 4 [Verificación](#4-verificacion)
 * 5 [Apéndice](#5-apendice)
 
-## Revision History
-| Name | Date    | Reason For Changes  | Version   |
-| ---- | ------- | ------------------- | --------- |
-|      |         |                     |           |
-|      |         |                     |           |
-|      |         |                     |           |
+## Revision Histórica
+| Nombre | Fecha   | Motivo de cambios   | Version   |
+| ------ | ------- | ------------------- | --------- |
+|        |         |                     |           |
+|        |         |                     |           |
+|        |         |                     |           |
 
 ## 1. Introducción
 
