@@ -2,8 +2,7 @@
 ## Proyector de horarios UTB
 
 Version 0.1  
-Prepared by <author>  
-<organization>  
+Prepared by Joel González, Eddy Ruiz, Álvaro Ayala, Jesús Lorett, Maykol Madrid  
 <date created>  
 
 Table of Contents
