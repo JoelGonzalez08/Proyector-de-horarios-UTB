@@ -10,4 +10,4 @@ Esperamos que encuentres en este software un aliado en tu vida académica, y est
 
 ¡Gracias por ser parte de este proyecto y esperamos que te sea de gran utilidad!
 
-Puedes ver el archivo [SRS](_SRS.md) para más detalles.
+Puedes ver el archivo [SRS](SRS.md) para más detalles.
