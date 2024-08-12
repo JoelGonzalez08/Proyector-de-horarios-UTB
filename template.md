@@ -1,5 +1,5 @@
 # Software Requirements Specification
-## For <project name>
+## For Proyector de horarios UTB
 
 Version 0.1  
 Prepared by <author>  
@@ -22,28 +22,34 @@ Table of Contents
   * 2.4 [Supuestos y dependencias](#24-supuestos-y-dependencias)
   * 2.5 [Distribución de requisitos](#25-distribucion-de-requisitos)
 * 3 [Requerimientos](#3-requerimientos)
-  * 3.1 [External Interfaces](#31-external-interfaces)
-    * 3.1.1 [User Interfaces](#311-user-interfaces)
-    * 3.1.2 [Hardware Interfaces](#312-hardware-interfaces)
-    * 3.1.3 [Software Interfaces](#313-software-interfaces)
-  * 3.2 [Functional](#32-functional)
-  * 3.3 [Quality of Service](#33-quality-of-service)
-    * 3.3.1 [Performance](#331-performance)
-    * 3.3.2 [Security](#332-security)
-    * 3.3.3 [Reliability](#333-reliability)
-    * 3.3.4 [Availability](#334-availability)
-  * 3.4 [Compliance](#34-compliance)
-  * 3.5 [Design and Implementation](#35-design-and-implementation)
-    * 3.5.1 [Installation](#351-installation)
-    * 3.5.2 [Distribution](#352-distribution)
-    * 3.5.3 [Maintainability](#353-maintainability)
-    * 3.5.4 [Reusability](#354-reusability)
-    * 3.5.5 [Portability](#355-portability)
-    * 3.5.6 [Cost](#356-cost)
-    * 3.5.7 [Deadline](#357-deadline)
-    * 3.5.8 [Proof of Concept](#358-proof-of-concept)
-* 4 [Verification](#4-verification)
-* 5 [Appendixes](#5-appendixes)
+  * 3.1 [Requerimientos funcionales](#31-requerimientos-funcionales)
+  * 3.2 [Requerimientos no funcionales](#32-requerimientos-no-funcionales)
+    * 3.2.1 [Rendimiento](#321-rendimiento)
+    * 3.2.2 [Escalabilidad](#322-escalabilidad)
+    * 3.2.3 [Disponibilidad](#323-disponibilidad)
+    * 3.2.4 [Usabilidad](#324-usabilidad)
+    * 3.2.5 [Portabilidad](#325-portabilidad)
+  * 3.3 [Requerimientos del sistema](#33-requerimientos-del-sistema)
+    * 3.3.1 [Compatibilidad](#331-compatibilidad)
+    * 3.3.2 [Regulaciones y políticas](#332-regulaciones-y-politicas)
+    * 3.3.3 [Seguridad](#333-seguridad)
+    * 3.3.4 [Mantenimiento y actualización](#334-mantenimiento-y-actualizacion)
+  * 3.4 [Interfaces externas](#34-interfaces-externas)
+    * 3.4.1 [Interfaces de usuario](#341-interfaces-de-usuario)
+    * 3.4.2 [Interfaces de hardware](#342-interfaces-de-hardware)
+    * 3.4.3 [Interfaces de software](#343-interfaces-de-software)
+  * 3.5 [Cumplimiento](#35-cumplimiento)
+  * 3.6 [Diseño e implementación](#36-diseno-e-implementacion)
+    * 3.6.1 [Instalación](#361-instalacion)
+    * 3.6.2 [Distribución](#362-distribucion)
+    * 3.6.3 [Mantenimiento](#363-mantenimiento)
+    * 3.6.4 [Reutilización](#364-reutilizacion)
+    * 3.6.5 [Portabilidad](#365-portabilidad)
+    * 3.6.6 [Costo](#366-costo)
+    * 3.6.7 [Fecha límite](#367-fecha-limite)
+    * 3.6.8 [Prueba de concepto](#368-prueba-de-concepto)
+* 4 [Verificación](#4-verificacion)
+* 5 [Apéndice](#5-apendice)
 
 ## Revision History
 | Name | Date    | Reason For Changes  | Version   |
@@ -102,17 +108,18 @@ El sistema está destinado a ser utilizado por estudiantes universitarios, con d
 - Asume que los usuarios tendrán acceso a credenciales válidas para la autenticación.
 
 ### 2.5 Distribución de requisitos
+
 ## 3. Requerimientos
 
-### 3.1 Requisitos Funcionales
-- **Generación de Horarios**: El sistema debe generar todas las combinaciones posibles de horarios basados en las materias seleccionadas. A su vez, dentro de los horarios, cada materia se deberá mostrar con código de la clase (NRC), profesor y salón asignado.
-- **Gestión de Información**: El sistema debe permitir la actualización dinámica de datos de horarios, salones, y profesores proporcionados por la UTB.
-- **Interacción con el Usuario**: Los usuarios deben poder filtrar entre sus preferencias (horario de clase preferido, profesores, etc) y recibir opciones de horarios personalizados.
- El sistema también debe permitir guardar y exportar los horarios en formatos como PDF o JPG.
-Los usuarios deben recibir una notificación vía e-mail sobre variaciones en sus horarios (cambio de salón, de profesor, etc.).
+### 3.1 Requerimientos Funcionales
+* **Generación de Horarios**: El sistema debe generar todas las combinaciones posibles de horarios basados en las materias seleccionadas. A su vez, dentro de los horarios, cada materia se deberá mostrar con código de la clase (NRC), profesor y salón asignado.
+* **Gestión de Información**: El sistema debe permitir la actualización dinámica de datos de horarios, salones, y profesores proporcionados por la UTB.
+* **Interacción con el Usuario**: Los usuarios deben poder filtrar entre sus preferencias (horario de clase preferido, profesores, etc) y recibir opciones de horarios personalizados.
+* **Exportación**: El sistema también debe permitir guardar y exportar los horarios en formatos como PDF o JPG.
+* **Notificación**: Los usuarios deben recibir una notificación vía e-mail sobre variaciones en sus horarios (cambio de salón, de profesor, etc.).
 
 
-### 3.2 Requerimientos No Funcionales
+### 3.2 Requerimientos no funcionales
 
 #### 3.2.1 Rendimiento
 * El sistema debe ser capaz de procesar y generar horarios en tiempo real para al menos 5000 estudiantes simultáneamente.
@@ -133,37 +140,28 @@ Los usuarios deben recibir una notificación vía e-mail sobre variaciones en su
 *Despliegue en Diferentes Entornos: El software debe ser fácil de desplegar en diferentes entornos, incluyendo servidores locales de la universidad y plataformas en la nube, asegurando que pueda ser trasladado o escalado según sea necesario.
 * Independencia de Plataforma: El código del software debe ser lo suficientemente flexible para funcionar tanto en diferentes sistemas operativos de escritorio como Windows, Linux o MacOS, como de sistemas operativos móviles como lo son Android y IOS, sin necesidad de modificaciones significativas.
 
-### 3.3 Requerimientos del Usuario
+### 3.3 Requerimientos del sistema
 
-#### 3.3.1 Acceso Personalizado
-* Los estudiantes deben poder acceder a la plataforma utilizando sus credenciales universitarias (correo institucional y contraseña).
-* Cada estudiante debe tener acceso a su plan de estudios y opciones de horario basadas en su carrera y semestre.
-
-#### 3.3.2 Soporte Multilingüe
-* El sistema debe ofrecer soporte en varios idiomas, incluido el español y el inglés, para facilitar su uso por parte de estudiantes internacionales.
-
-### 3.4 Requerimientos del sistema
-
-#### 3.4.1 Compatibilidad
+#### 3.3.1 Compatibilidad
 * El sistema debe ser compatible con las plataformas tecnológicas actuales de la UTB, incluyendo el sistema de gestión académica y la base de datos de horarios.
 
-#### 3.4.2 Regulaciones y Políticas
+#### 3.3.2 Regulaciones y políticas
 * El sistema debe cumplir con las políticas de privacidad y protección de datos de la UTB y las regulaciones locales sobre manejo de información personal.
 * Este conjunto de requerimientos proporciona una base sólida para comenzar el desarrollo de una aplicación o servicio que genere horarios estudiantiles de manera eficiente y que cumpla con las expectativas y necesidades tanto de los estudiantes como de la administración universitaria.
 
-#### 3.4.3 Seguridad
+#### 3.3.3 Seguridad
 * Autenticación y Autorización: El acceso al sistema estará restringido a usuarios autenticados mediante el sistema de autenticación de la UTB (correo institucional). Solo los estudiantes y directivos autorizados podrán acceder a la funcionalidad del software.
 * Protección de Datos: Toda la información personal y académica extraída y utilizada por el sistema debe estar encriptada durante la transmisión y almacenamiento, cumpliendo con las normativas de protección de datos de la universidad.
 * Privacidad: Los datos temporales almacenados en la base de datos serán eliminados periódicamente para evitar la retención innecesaria de información sensible.
 
-#### 3.4.4 Mantenimiento y actualización
+#### 3.3.4 Mantenimiento y actualización
 * Facilidad de Mantenimiento: El software debe estar diseñado de manera modular, permitiendo actualizaciones y mantenimiento sin afectar el funcionamiento global del sistema. El código debe ser bien documentado y seguir estándares de programación para facilitar el trabajo de los desarrolladores.
 * Actualizaciones: El sistema debe ser capaz de recibir actualizaciones periódicas sin interrumpir el servicio. Estas actualizaciones pueden incluir mejoras de funcionalidad, parches de seguridad y optimizaciones de rendimiento.
 
-### 3.5 External Interfaces
+### 3.4 Interfaces externas
 El software proyector de horarios interactuará con varios sistemas y dispositivos externos para cumplir con sus funciones. A continuación, se detallan las interfaces externas clave:
 
-#### 3.5.1 User interfaces
+#### 3.4.1 Interfaces de usuario
 El sistema requerirá una interfaz gráfica de usuario (GUI) intuitiva y accesible, compatible con dispositivos móviles y de escritorio. La interfaz debe permitir a los estudiantes ingresar sus preferencias y seleccionar entre las combinaciones de horarios generadas.
 
 * **Acceso Personalizado** : Los estudiantes deben poder acceder a la plataforma utilizando sus credenciales universitarias (correo institucional y contraseña).
@@ -171,30 +169,30 @@ Cada estudiante debe tener acceso a su plan de estudios y opciones de horario ba
 
 * **Soporte Multilingüe** : El sistema debe ofrecer soporte en varios idiomas, incluido el español y el inglés, para facilitar su uso por parte de estudiantes internacionales.
 
-#### 3.5.2 Hardware interfaces
+#### 3.4.2 Interfaces de hardware
 
-#### 3.5.3 Software interfaces
+#### 3.4.3 Interfaces de software
 
-### 3.6 Compliance
+### 3.5 Cumplimiento
 
-### 3.7 Design and Implementation
+### 3.6 Diseño e implementación
 
-#### 3.7.1 Installation
+#### 3.6.1 Instalación
 
-#### 3.7.2 Distribution
+#### 3.6.2 Distribución
 
-#### 3.7.3 Maintainability
+#### 3.6.3 Mantenimiento
 
-#### 3.7.4 Reusability
+#### 3.6.4 Reutilización
 
-#### 3.7.5 Portability
+#### 3.6.5 Portabilidad
 
-#### 3.7.6 Cost
+#### 3.6.6 Costo
 
-#### 3.7.7 Deadline
+#### 3.6.7 Fecha límite
 
-#### 3.7.8 Proof of Concept
+#### 3.6.8 Prueba de concepto
 
-## 4. Verification
+## 4. Verificación
 
-## 5. Appendixes
+## 5. Apéndice
