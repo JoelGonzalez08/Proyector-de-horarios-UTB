@@ -1,5 +1,5 @@
 # Software Requirements Specification
-## For Proyector de horarios UTB
+## Proyector de horarios UTB
 
 Version 0.1  
 Prepared by <author>  
