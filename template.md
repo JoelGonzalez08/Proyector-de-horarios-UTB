@@ -10,8 +10,8 @@ Table of Contents
 =================
 * [Revision History](#revision-history)
 * 1 [Introducción](#1-introducción)
-  * 1.1 [Document Purpose](#11-document-purpose)
-  * 1.2 [Product Scope](#12-product-scope)
+  * 1.1 [Propósito del documento](#11-propósito-del-documento)
+  * 1.2 [Alcance del producto](#12-alcance-del-producto)
   * 1.3 [Definitions, Acronyms and Abbreviations](#13-definitions-acronyms-and-abbreviations)
   * 1.4 [References](#14-references)
   * 1.5 [Document Overview](#15-document-overview)
@@ -56,10 +56,10 @@ Table of Contents
 ## 1. Introducción
 
 
-### 1.1 Document Purpose
+### 1.1 Propósito del documento
 El propósito de este documento es especificar los requisitos del software para el desarrollo de un planeador de horarios universitarios dirigido a los estudiantes de la Universidad Tecnológica de Bolívar (UTB) y a los directivos de la institución. Este documento tiene como objetivo principal establecer las características, funcionalidades y restricciones que debe cumplir el sistema, con el fin de asegurar que satisfaga las necesidades y expectativas tanto de los estudiantes como de la administración universitaria. Además, este documento servirá como una guía para los desarrolladores, asegurando que el software se diseñe y construya de manera coherente con los objetivos establecidos y con un enfoque en la optimización de la planificación académica, la satisfacción del usuario y la eficiencia en el uso de los recursos académicos. 
 
-### 1.2 Product Scope
+### 1.2 Alcance del producto
 El producto cubierto por este documento es un software planeador de horarios universitarios para la Universidad Tecnológica de Bolívar (UTB), destinado a facilitar la planificación académica de los estudiantes. Este documento especifica los requisitos del software en su versión inicial, detallando tanto las funcionalidades esenciales como las restricciones y condiciones bajo las cuales el sistema operará.
 El software permitirá a los estudiantes ingresar los códigos de sus materias y generará automáticamente todas las combinaciones posibles de horarios basados en las opciones disponibles de asignaturas, profesores y salones. Este sistema proporcionará a los estudiantes una herramienta eficaz para optimizar la selección de sus horarios, evitando conflictos y ajustándose a sus preferencias personales, como horarios preferidos y profesores específicos.
 Además, el software se integrará con la base de datos existente de la UTB, permitiendo la actualización dinámica de la información sobre horarios, salones y disponibilidad de profesores. Los administradores designados podrán gestionar y modificar esta información de manera segura y eficiente.
