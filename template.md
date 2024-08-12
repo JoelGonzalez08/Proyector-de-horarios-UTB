@@ -54,66 +54,86 @@ Table of Contents
 |      |         |                     |           |
 
 ## 1. Introduction
-> This section should provide an overview of the entire document
+
 
 ### 1.1 Document Purpose
-Describe the purpose of the SRS and its intended audience.
+El propósito de este documento es especificar los requisitos del software para el desarrollo de un planeador de horarios universitarios dirigido a los estudiantes de la Universidad Tecnológica de Bolívar (UTB) y a los directivos de la institución. Este documento tiene como objetivo principal establecer las características, funcionalidades y restricciones que debe cumplir el sistema, con el fin de asegurar que satisfaga las necesidades y expectativas tanto de los estudiantes como de la administración universitaria. Además, este documento servirá como una guía para los desarrolladores, asegurando que el software se diseñe y construya de manera coherente con los objetivos establecidos y con un enfoque en la optimización de la planificación académica, la satisfacción del usuario y la eficiencia en el uso de los recursos académicos. 
 
 ### 1.2 Product Scope
-Identify the product whose software requirements are specified in this document, including the revision or release number. Explain what the product that is covered by this SRS will do, particularly if this SRS describes only part of the system or a single subsystem. Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals. Relate the software to corporate goals or business strategies. If a separate vision and scope document is available, refer to it rather than duplicating its contents here.
+El producto cubierto por este documento es un software planeador de horarios universitarios para la Universidad Tecnológica de Bolívar (UTB), destinado a facilitar la planificación académica de los estudiantes. Este documento especifica los requisitos del software en su versión inicial, detallando tanto las funcionalidades esenciales como las restricciones y condiciones bajo las cuales el sistema operará.
+El software permitirá a los estudiantes ingresar los códigos de sus materias y generará automáticamente todas las combinaciones posibles de horarios basados en las opciones disponibles de asignaturas, profesores y salones. Este sistema proporcionará a los estudiantes una herramienta eficaz para optimizar la selección de sus horarios, evitando conflictos y ajustándose a sus preferencias personales, como horarios preferidos y profesores específicos.
+Además, el software se integrará con la base de datos existente de la UTB, permitiendo la actualización dinámica de la información sobre horarios, salones y disponibilidad de profesores. Los administradores designados podrán gestionar y modificar esta información de manera segura y eficiente.
+Los beneficios esperados incluyen la reducción del tiempo y esfuerzo que los estudiantes dedican a la planificación de sus horarios, el aumento de la satisfacción estudiantil mediante una experiencia de usuario optimizada y la mejora en la gestión de los recursos académicos al evitar solapamientos y maximizar el uso de aulas y profesores.
+Si bien este documento se centra en la versión inicial del software, se prevé la posibilidad de futuras expansiones que incluirán nuevas funcionalidades y mejoras en respuesta a las necesidades emergentes de los estudiantes.
+
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
+* **SRS**: Especificación de Requisitos de Software (Software Requirements Specification).
+* **GUI**: Interfaz Gráfica de Usuario (Graphical User Interface).
+* **Web Scraping**: Proceso automatizado de extracción de información desde sitios web. En el contexto de este proyecto, el web scraping se utilizará para obtener los horarios de cada clase desde la plataforma Banner de la Universidad Tecnológica de Bolívar (UTB). Este método permitirá al software planeador de horarios extraer datos relevantes, como horarios, aulas y profesores, directamente desde el sistema institucional, garantizando que la información utilizada en la planificación académica esté siempre actualizada y sea precisa.
+
+
 ### 1.4 References
-List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
+
 
 ### 1.5 Document Overview
-Describe what the rest of the document contains and how it is organized.
+Este documento está organizado de la siguiente manera:
+* La Sección 2 proporciona una visión general del producto, incluyendo su contexto, funciones principales, restricciones y características del usuario.
+* La Sección 3 detalla los requisitos específicos del software, incluyendo interfaces externas, requisitos funcionales y no funcionales, y otros aspectos técnicos.
+
 
 ## 2. Product Overview
-> This section should describe the general factors that affect the product and its requirements. This section does not state specific requirements. Instead, it provides a background for those requirements, which are defined in detail in Section 3, and makes them easier to understand.
+
 
 ### 2.1 Product Perspective
-Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.
+El proyector de horarios UTB es un producto nuevo y autónomo, diseñado para integrarse con los sistemas actuales de la UTB. Este software proporcionará una solución eficiente para la gestión de horarios estudiantiles, sin necesidad de reemplazar sistemas existentes. Su implementación mejorará la experiencia académica de los estudiantes y optimizará la utilización de recursos institucionales.
 
 ### 2.2 Product Functions
-Summarize the major functions the product must perform or must let the user perform. Details will be provided in Section 3, so only a high level summary (such as a bullet list) is needed here. Organize the functions to make them understandable to any reader of the SRS. A picture of the major groups of related requirements and how they relate, such as a top level data flow diagram or object class diagram, is often effective.
-
-### 2.3 Product Constraints
-This subsection should provide a general description of any other items that will limit the developer’s options. These may include:  
-
-* Interfaces to users, other applications or hardware.  
-* Quality of service constraints.  
-* Standards compliance.  
-* Constraints around design or implementation.
+- **Generación de Horarios**: Crear todas las combinaciones posibles de horarios basados en materias, profesores, y salones disponibles.
+- **Gestión de Información Universitaria**: Integrar y actualizar dinámicamente la información de la universidad.
+- **Interacción con el Usuario**: Permitir a los estudiantes seleccionar y personalizar sus horarios.
+- **Acceso a la Información**: Proporcionar acceso seguro y autenticado a los estudiantes.
 
 ### 2.4 User Characteristics
-Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.
+El sistema está destinado a ser utilizado por estudiantes universitarios, con diferentes niveles de experiencia técnica. Se espera que los usuarios tengan acceso regular a internet y dispositivos compatibles, y que estén familiarizados con la navegación básica en entornos digitales.
 
 ### 2.5 Assumptions and Dependencies
-List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).
+- El sistema depende de la exactitud y actualización oportuna de los datos proporcionados por la UTB.
+- Asume que los usuarios tendrán acceso a credenciales válidas para la autenticación.
 
 ### 2.6 Apportioning of Requirements
-Apportion the software requirements to software elements. For requirements that will require implementation over multiple software elements, or when allocation to a software element is initially undefined, this should be so stated. A cross reference table by function and software element should be used to summarize the apportioning.
-
-Identify requirements that may be delayed until future versions of the system (e.g., blocks and/or increments).
 
 ## 3. Requirements
 
+### 3.1 Requisitos Funcionales
+- **Generación de Horarios**: El sistema debe generar todas las combinaciones posibles de horarios basados en las materias seleccionadas. A su vez, dentro de los horarios, cada materia se deberá mostrar con código de la clase (NRC), profesor y salón asignado.
+- **Gestión de Información**: El sistema debe permitir la actualización dinámica de datos de horarios, salones, y profesores proporcionados por la UTB.
+- **Interacción con el Usuario**: Los usuarios deben poder filtrar entre sus preferencias (horario de clase preferido, profesores, etc) y recibir opciones de horarios personalizados.
+ El sistema también debe permitir guardar y exportar los horarios en formatos como PDF o JPG.
+Los usuarios deben recibir una notificación vía e-mail sobre variaciones en sus horarios (cambio de salón, de profesor, etc.).
+
+
 ### 3.2 Requerimientos No Funcionales
+
 #### 3.2.1 Rendimiento
 * El sistema debe ser capaz de procesar y generar horarios en tiempo real para al menos 5000 estudiantes simultáneamente.
 * La respuesta del sistema ante las consultas de los estudiantes debe ser inferior a 2 segundos.
 
-#### 3.2.3 Escalabilidad
+#### 3.2.2 Escalabilidad
 * El sistema debe ser escalable para soportar un incremento en la cantidad de usuarios y de datos a lo largo del tiempo, especialmente durante períodos de inscripción y cambios de semestre.
 
-#### 3.2.4 Disponibilidad
+#### 3.2.3 Disponibilidad
 * El sistema debe estar disponible el 99.9% del tiempo, con una tolerancia mínima a fallos durante períodos críticos como la inscripción de materias.
 
-#### 3.2.5 Usabilidad
+#### 3.2.4 Usabilidad
 * La interfaz de usuario debe ser diseñada para ser intuitiva, fácil de usar y accesible desde dispositivos móviles y de escritorio.
 * Debe cumplir con estándares de accesibilidad para asegurar que todos los estudiantes, incluyendo aquellos con discapacidades, puedan utilizar el sistema sin inconvenientes.
+*  La interfaz debe ser completamente funcional en una variedad de dispositivos, incluyendo PCs, laptops, tablets y smartphones, y ser compatible con los principales navegadores web (Chrome, Firefox, Safari, Edge).
+
+#### 3.2.5 Portabilidad
+*Despliegue en Diferentes Entornos: El software debe ser fácil de desplegar en diferentes entornos, incluyendo servidores locales de la universidad y plataformas en la nube, asegurando que pueda ser trasladado o escalado según sea necesario.
+* Independencia de Plataforma: El código del software debe ser lo suficientemente flexible para funcionar tanto en diferentes sistemas operativos de escritorio como Windows, Linux o MacOS, como de sistemas operativos móviles como lo son Android y IOS, sin necesidad de modificaciones significativas.
 
 ### 3.3 Requerimientos del Usuario
 
@@ -124,7 +144,7 @@ Identify requirements that may be delayed until future versions of the system (e
 #### 3.3.2 Soporte Multilingüe
 * El sistema debe ofrecer soporte en varios idiomas, incluido el español y el inglés, para facilitar su uso por parte de estudiantes internacionales.
 
-### 3.4 Restricciones
+### 3.4 Requerimientos del sistema
 
 #### 3.4.1 Compatibilidad
 * El sistema debe ser compatible con las plataformas tecnológicas actuales de la UTB, incluyendo el sistema de gestión académica y la base de datos de horarios.
@@ -133,105 +153,50 @@ Identify requirements that may be delayed until future versions of the system (e
 * El sistema debe cumplir con las políticas de privacidad y protección de datos de la UTB y las regulaciones locales sobre manejo de información personal.
 * Este conjunto de requerimientos proporciona una base sólida para comenzar el desarrollo de una aplicación o servicio que genere horarios estudiantiles de manera eficiente y que cumpla con las expectativas y necesidades tanto de los estudiantes como de la administración universitaria.
 
-### 3.1 External Interfaces
-> This subsection defines all the inputs into and outputs requirements of the software system. Each interface defined may include the following content:
-* Name of item
-* Source of input or destination of output
-* Valid range, accuracy, and/or tolerance
-* Units of measure
-* Timing
-* Relationships to other inputs/outputs
-* Screen formats/organization
-* Window formats/organization
-* Data formats
-* Command formats
-* End messages
+#### 3.4.3 Seguridad
+* Autenticación y Autorización: El acceso al sistema estará restringido a usuarios autenticados mediante el sistema de autenticación de la UTB (correo institucional). Solo los estudiantes y directivos autorizados podrán acceder a la funcionalidad del software.
+* Protección de Datos: Toda la información personal y académica extraída y utilizada por el sistema debe estar encriptada durante la transmisión y almacenamiento, cumpliendo con las normativas de protección de datos de la universidad.
+* Privacidad: Los datos temporales almacenados en la base de datos serán eliminados periódicamente para evitar la retención innecesaria de información sensible.
 
-#### 3.1.1 User interfaces
-Define the software components for which a user interface is needed. Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Details of the user interface design should be documented in a separate user interface specification.
+#### 3.4.4 Mantenimiento y actualización
+* Facilidad de Mantenimiento: El software debe estar diseñado de manera modular, permitiendo actualizaciones y mantenimiento sin afectar el funcionamiento global del sistema. El código debe ser bien documentado y seguir estándares de programación para facilitar el trabajo de los desarrolladores.
+* Actualizaciones: El sistema debe ser capaz de recibir actualizaciones periódicas sin interrumpir el servicio. Estas actualizaciones pueden incluir mejoras de funcionalidad, parches de seguridad y optimizaciones de rendimiento.
 
-Could be further divided into Usability and Convenience requirements.
+### 3.5 External Interfaces
+El software proyector de horarios interactuará con varios sistemas y dispositivos externos para cumplir con sus funciones. A continuación, se detallan las interfaces externas clave:
 
-#### 3.1.2 Hardware interfaces
-Describe the logical and physical characteristics of each interface between the software product and the hardware components of the system. This may include the supported device types, the nature of the data and control interactions between the software and the hardware, and communication protocols to be used.
+#### 3.5.1 User interfaces
+El sistema requerirá una interfaz gráfica de usuario (GUI) intuitiva y accesible, compatible con dispositivos móviles y de escritorio. La interfaz debe permitir a los estudiantes ingresar sus preferencias y seleccionar entre las combinaciones de horarios generadas.
 
-#### 3.1.3 Software interfaces
-Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.
+* **Acceso Personalizado** : Los estudiantes deben poder acceder a la plataforma utilizando sus credenciales universitarias (correo institucional y contraseña).
+Cada estudiante debe tener acceso a su plan de estudios y opciones de horario basadas en su carrera y semestre.
 
-### 3.2 Functional
-#### 3.2.1 Generación de Horarios
-* La aplicación debe ser capaz de generar todas las combinaciones posibles de horarios basados en las asignaturas, profesores, y     salones disponibles para cada carrera.
-* Debe permitir a los estudiantes seleccionar sus materias de acuerdo con su plan de estudios.
-* El sistema debe mostrar las opciones de horarios disponibles basadas en la selección de materias y sus restricciones.
+* **Soporte Multilingüe** : El sistema debe ofrecer soporte en varios idiomas, incluido el español y el inglés, para facilitar su uso por parte de estudiantes internacionales.
 
-#### 3.2.2 Gestión de Información de la Universidad
-* El sistema debe integrar y actualizar dinámicamente la información de los horarios, salones, y profesores proporcionada por la UTB.
-Debe permitir la consulta y modificación de la información por parte de administradores designados.
+#### 3.5.2 Hardware interfaces
 
-#### 3.2.3 Interacción con el Usuario
-* Los estudiantes deben poder ingresar sus preferencias (como horarios preferidos, profesores, etc.) y recibir opciones de horarios personalizados.
-* El sistema debe permitir a los estudiantes guardar y exportar sus horarios en formatos como PDF o imagen.
-Debe ser capaz de notificar a los estudiantes sobre cambios en sus horarios (cambio de salón, cambio de profesor, etc.).
+#### 3.5.3 Software interfaces
 
-#### 3.2.4 Acceso a la Información
-* El sistema debe proporcionar acceso seguro a los estudiantes mediante autenticación basada en credenciales universitarias.
-* Debe incluir una interfaz intuitiva y accesible para que los estudiantes puedan navegar y seleccionar sus opciones de horario sin complicaciones.
+### 3.6 Compliance
 
-### 3.3 Quality of Service
-> This section states additional, quality-related property requirements that the functional effects of the software should present.
+### 3.7 Design and Implementation
 
-#### 3.3.1 Performance
-If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.
+#### 3.7.1 Installation
 
-#### 3.3.2 Security
-* Los datos de los estudiantes y de la universidad deben estar encriptados durante el almacenamiento y transmisión.
-* Debe garantizar la autenticación y autorización adecuadas para diferentes roles de usuario (estudiantes, administradores, etc.).
+#### 3.7.2 Distribution
 
-#### 3.3.3 Reliability
-Specify the factors required to establish the required reliability of the software system at time of delivery.
+#### 3.7.3 Maintainability
 
-#### 3.3.4 Availability
-Specify the factors required to guarantee a defined availability level for the entire system such as checkpoint, recovery, and restart.
+#### 3.7.4 Reusability
 
-### 3.4 Compliance
-Specify the requirements derived from existing standards or regulations, including:  
-* Report format
-* Data naming
-* Accounting procedures
-* Audit tracing
+#### 3.7.5 Portability
 
-For example, this could specify the requirement for software to trace processing activity. Such traces are needed for some applications to meet minimum regulatory or financial standards. An audit trace requirement may, for example, state that all changes to a payroll database shall be recorded in a trace file with before and after values.
+#### 3.7.6 Cost
 
-### 3.5 Design and Implementation
+#### 3.7.7 Deadline
 
-#### 3.5.1 Installation
-Constraints to ensure that the software-to-be will run smoothly on the target implementation platform.
-
-#### 3.5.2 Distribution
-Constraints on software components to fit the geographically distributed structure of the host organization, the distribution of data to be processed, or the distribution of devices to be controlled.
-
-#### 3.5.3 Maintainability
-Specify attributes of software that relate to the ease of maintenance of the software itself. These may include requirements for certain modularity, interfaces, or complexity limitation. Requirements should not be placed here just because they are thought to be good design practices.
-
-#### 3.5.4 Reusability
-<!-- TODO: come up with a description -->
-
-#### 3.5.5 Portability
-Specify attributes of software that relate to the ease of porting the software to other host machines and/or operating systems.
-
-#### 3.5.6 Cost
-Specify monetary cost of the software product.
-
-#### 3.5.7 Deadline
-Specify schedule for delivery of the software product.
-
-#### 3.5.8 Proof of Concept
-<!-- TODO: come up with a description -->
+#### 3.7.8 Proof of Concept
 
 ## 4. Verification
-> This section provides the verification approaches and methods planned to qualify the software. The information items for verification are recommended to be given in a parallel manner with the requirement items in Section 3. The purpose of the verification process is to provide objective evidence that a system or system element fulfills its specified requirements and characteristics.
-
-<!-- TODO: give more guidance, similar to section 3 -->
-<!-- ieee 15288:2015 -->
 
 ## 5. Appendixes
